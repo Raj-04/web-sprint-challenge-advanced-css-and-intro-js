@@ -270,9 +270,9 @@ function get20s(array, number,){
 
 function removeArtist(array, number){
    /*Your Code Here*/
-
+  
    for(let i = 0; i<array.length; i++){
-     if(array[i] === (number )){
+     if(array[i]['id'] === number){
        array.splice(i, 1);
      }
    }
