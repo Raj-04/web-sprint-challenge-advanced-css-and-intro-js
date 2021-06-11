@@ -272,11 +272,11 @@ function removeArtist(array, number){
    /*Your Code Here*/
 
    for(let i = 0; i<array.length; i++){
-     if(array[i].includes (number)){
+     if(array[i] === (number )){
        array.splice(i, 1);
      }
    }
-   return array[number];
+   return array['length'];
 }
 
    
@@ -315,9 +315,13 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(array, num){
   /*Your Code Here*/
-  for(let i = 0; i<array.length; I++){
-
+  const paint = [];
+  for(let i = 0; i<array.length; i++){
+    if(array[i]['paintings'] >= '100'){
+      paint.push(array[i]['name']);
   }
+  }
+  return paint;
 }
 
 
