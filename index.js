@@ -218,9 +218,9 @@ Practice accessing data above by console.log-ing following items:
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-artists[8].name = "Vincent Van Dough";
+// artists[8].name = "Vincent Van Dough";
 
-console.log('task2',artists[8]);
+// console.log('task2',artists[8]);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
  Use getArtistByIndex to do the following:
@@ -249,8 +249,9 @@ function get20s(array, number,){
   /*Your Code Here*/
   let newArray = []
   for(let i = 0; i<array.length; i++){
-    if(array[i]['years'] < (number+1) && array[i]['years'] >= number )
-      newArray.push(arrray[i]);
+    if(array[i]['years'] >= '1900' && array[i]['years'] <= '2000' ){
+      newArray.push(array[i]['name']);
+    }
     }
     return newArray
   }
@@ -269,12 +270,15 @@ function get20s(array, number,){
 
 function removeArtist(array, number){
    /*Your Code Here*/
+
    for(let i = 0; i<array.length; i++){
-     if(array[i] === number){
+     if(array[i].includes (number)){
        array.splice(i, 1);
      }
-   }return array.leghth;
+   }
+   return array[number];
 }
+
    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -293,10 +297,12 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(){
+function addArtist(array){
     /*Your Code Here*/
+    array.push('id: 20', 'name: Raj', 'years:1999-2021', 'genre: Web Design', 'nationality: Indian','bio:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' );
+  return array;
+}
 
-  }
 
   
 
@@ -307,10 +313,12 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
+function lotsOfArt(array, num){
   /*Your Code Here*/
-}
+  for(let i = 0; i<array.length; I++){
 
+  }
+}
 
 
 
